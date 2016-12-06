@@ -1,3 +1,5 @@
 *.db
 .ipynb_checkpoints/presentation-checkpoint.ipynb
 reveal.js/*
+presentatie.7z
+presentation.slides.html
