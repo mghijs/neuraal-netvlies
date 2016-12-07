@@ -3,3 +3,7 @@
 reveal.js/*
 presentatie.7z
 presentation.slides.html
+reportIP.7z
+latex_report/MLforIP.aux
+*.aux
+latex_report/MLpracsyllab.pdf
