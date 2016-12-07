@@ -1,0 +1,19 @@
+\select@language {english}
+\contentsline {part}{\numberline {I}Introduction To Machine Learning}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Scientific programming for Machine Learning}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Getting started in R: basics}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Important data structures}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Functions}{4}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Arrays and matrices}{5}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Strings}{5}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Logical variables}{6}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Missing values}{6}{subsection.1.3.5}
+\contentsline {subsection}{\numberline {1.3.6}Lists and data frames}{6}{subsection.1.3.6}
+\contentsline {section}{\numberline {1.4}Loops and conditional execution}{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}\texttt {if} statements}{8}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}\texttt {for} loops}{9}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Reading data from files}{9}{section.1.5}
+\contentsline {section}{\numberline {1.6}Plotting functions}{10}{section.1.6}
+\contentsline {section}{\numberline {1.7}Debugging in R}{12}{section.1.7}
+\contentsfinish 
