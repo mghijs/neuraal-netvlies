@@ -11819,6 +11819,26 @@ a.anchor-link {
 </head>
 
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<style type="text/css">
+//div.output_wrapper {
+//  margin-top: 0px;
+//}
+.input_hidden {
+  display: none;
+//  margin-top: 5px;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $(".output_wrapper").click(function(){
+      $(this).prev('.input_hidden').slideToggle();
+  });
+})
+</script>
+
 <body>
 
 
@@ -11830,21 +11850,17 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Machine-Learning-for-Image-Processing">Machine Learning for Image Processing<a class="anchor-link" href="#Machine-Learning-for-Image-Processing">&#182;</a></h1>
+<h1 id="Machine-Learning-for-Image-Processing">Machine Learning for Image Processing<a class="anchor-link" href="#Machine-Learning-for-Image-Processing">&#182;</a></h1><p><img src="./figures/cifar_alles.png" alt="cifar" style="width: 600px;"/></p>
+
 </div>
 </div>
-</div>
+</div></section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Contents">Contents<a class="anchor-link" href="#Contents">&#182;</a></h2><ol>
-<li>ML applications within image processing</li>
-<li>Main method: Convolutional Neural Networks</li>
-<li>Other methods??</li>
-<li>Application</li>
-</ol>
+<h1 id="Table-of-Contents">Table of Contents<a class="anchor-link" href="#Table-of-Contents">&#182;</a></h1><p><p><div class="lev1 toc-item"><a href="#Machine-Learning-for-Image-Processing" data-toc-modified-id="Machine-Learning-for-Image-Processing-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Machine Learning for Image Processing</a></div><div class="lev1 toc-item"><a href="#From-cable-transmission-to-far-beyond:-applications-and-evolution-of-image-processing" data-toc-modified-id="From-cable-transmission-to-far-beyond:-applications-and-evolution-of-image-processing-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>From cable transmission to far beyond: applications and evolution of image processing</a></div><div class="lev2 toc-item"><a href="#Early-digital-image-processing" data-toc-modified-id="Early-digital-image-processing-2.1"><span class="toc-item-num">2.1&nbsp;&nbsp;</span>Early digital image processing</a></div><div class="lev2 toc-item"><a href="#Today:-automated-image-processing" data-toc-modified-id="Today:-automated-image-processing-2.2"><span class="toc-item-num">2.2&nbsp;&nbsp;</span>Today: automated image processing</a></div><div class="lev3 toc-item"><a href="#Project-Tango" data-toc-modified-id="Project-Tango-2.2.1"><span class="toc-item-num">2.2.1&nbsp;&nbsp;</span>Project Tango</a></div><div class="lev1 toc-item"><a href="#From-human-vision-to-computer-vision:-principles-and-mechanisms" data-toc-modified-id="From-human-vision-to-computer-vision:-principles-and-mechanisms-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>From human vision to computer vision: principles and mechanisms</a></div><div class="lev2 toc-item"><a href="#Image-Processing-Chain" data-toc-modified-id="Image-Processing-Chain-3.1"><span class="toc-item-num">3.1&nbsp;&nbsp;</span>Image Processing Chain</a></div><div class="lev1 toc-item"><a href="#Copying-the-brain:-Convolutional-Neural-Networks" data-toc-modified-id="Copying-the-brain:-Convolutional-Neural-Networks-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Copying the brain: Convolutional Neural Networks</a></div><div class="lev2 toc-item"><a href="#The-basics:-Artificial-Neural-Networks" data-toc-modified-id="The-basics:-Artificial-Neural-Networks-4.1"><span class="toc-item-num">4.1&nbsp;&nbsp;</span>The basics: Artificial Neural Networks</a></div><div class="lev3 toc-item"><a href="#Activation-functions" data-toc-modified-id="Activation-functions-4.1.1"><span class="toc-item-num">4.1.1&nbsp;&nbsp;</span>Activation functions</a></div><div class="lev4 toc-item"><a href="#Softmax-function" data-toc-modified-id="Softmax-function-4.1.1.1"><span class="toc-item-num">4.1.1.1&nbsp;&nbsp;</span>Softmax function</a></div><div class="lev3 toc-item"><a href="#Training" data-toc-modified-id="Training-4.1.2"><span class="toc-item-num">4.1.2&nbsp;&nbsp;</span>Training</a></div><div class="lev3 toc-item"><a href="#In-practice" data-toc-modified-id="In-practice-4.1.3"><span class="toc-item-num">4.1.3&nbsp;&nbsp;</span>In practice</a></div><div class="lev2 toc-item"><a href="#Convolutional-neural-networks" data-toc-modified-id="Convolutional-neural-networks-4.2"><span class="toc-item-num">4.2&nbsp;&nbsp;</span>Convolutional neural networks</a></div><div class="lev3 toc-item"><a href="#CNN-architecture" data-toc-modified-id="CNN-architecture-4.2.1"><span class="toc-item-num">4.2.1&nbsp;&nbsp;</span>CNN architecture</a></div><div class="lev2 toc-item"><a href="#Back-up-slides" data-toc-modified-id="Back-up-slides-4.3"><span class="toc-item-num">4.3&nbsp;&nbsp;</span>Back-up slides</a></div></p>
 
 </div>
 </div>
@@ -11854,7 +11870,122 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="ML-applications-within-Image-Processing">ML applications within Image Processing<a class="anchor-link" href="#ML-applications-within-Image-Processing">&#182;</a></h1>
+<h1 id="From-cable-transmission-to-far-beyond:-applications-and-evolution-of-image-processing">From cable transmission to far beyond: applications and evolution of image processing<a class="anchor-link" href="#From-cable-transmission-to-far-beyond:-applications-and-evolution-of-image-processing">&#182;</a></h1>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Early-digital-image-processing">Early digital image processing<a class="anchor-link" href="#Early-digital-image-processing">&#182;</a></h2><p><img src="./figures/Bartlane.jpg" alt="Bartlane picture transmission"></p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./figures/satellites.jpg" alt="Bartlane picture transmission"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Today:-automated-image-processing">Today: automated image processing<a class="anchor-link" href="#Today:-automated-image-processing">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input_hidden">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">vid</span> <span class="o">=</span> <span class="n">disp</span><span class="o">.</span><span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;s3kb2fkYbms&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">565</span><span class="p">)</span>
+<span class="n">disp</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">vid</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+
+        <iframe
+            width="1000"
+            height="565"
+            src="https://www.youtube.com/embed/s3kb2fkYbms"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
+        
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="text-align:right; font-size:50%">toggle code</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Project-Tango">Project Tango<a class="anchor-link" href="#Project-Tango">&#182;</a></h3><p><img src="./figures/projectTango.png" alt="tango"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="From-human-vision-to-computer-vision:-principles-and-mechanisms">From human vision to computer vision: principles and mechanisms<a class="anchor-link" href="#From-human-vision-to-computer-vision:-principles-and-mechanisms">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./figures/see_brain.jpg" alt=""></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Image-Processing-Chain">Image Processing Chain<a class="anchor-link" href="#Image-Processing-Chain">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -11867,19 +11998,135 @@ a.anchor-link {
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Copying-the-brain:-Convolutional-Neural-Networks">Copying the brain: Convolutional Neural Networks<a class="anchor-link" href="#Copying-the-brain:-Convolutional-Neural-Networks">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-basics:-Artificial-Neural-Networks">The basics: Artificial Neural Networks<a class="anchor-link" href="#The-basics:-Artificial-Neural-Networks">&#182;</a></h2><p><img src="./figures/ann_struct.jpg" alt="cifar" style="width: 1000px;"/></p>
 
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
 </div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Activation-functions">Activation functions<a class="anchor-link" href="#Activation-functions">&#182;</a></h3><p><img src="./figures/actiFunc.png" alt="cifar" style="width: 1000px;"/></p>
 
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Softmax-function">Softmax function<a class="anchor-link" href="#Softmax-function">&#182;</a></h4>$$f(\mathbf{a})_i = \frac{e^{a_i}}{\sum_{j=1}^k e^{a_j}}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Training">Training<a class="anchor-link" href="#Training">&#182;</a></h3><ul>
+<li>Difference between data and prediction: <strong>Loss function</strong> $\mathcal{L}$</li>
+</ul>
+$$\mathcal{L}_i(\mathbf{w}, \mathbf{b}) = -\sum_{i=1}^{n} y_i \log(f(\mathbf{x})_i)$$
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Finding minimum: <strong>gradient descent</strong>
+<img src="https://iamtrask.github.io/img/sgd_optimal.png" alt="descent"></li>
+</ul>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><strong>backpropagation</strong></li>
+</ul>
+<p><img src="./figures/Backprop.png" alt="Backpropagation Neural Network - How it Works e.g. Counting"></p>
+<p>Source: <a href="https://github.com/MichielStock/Teaching">https://github.com/MichielStock/Teaching</a></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="In-practice">In practice<a class="anchor-link" href="#In-practice">&#182;</a></h3><p><img src="https://cdn-images-1.medium.com/max/1000/1*UDgDe_-GMs4QQbT8UopoGA.png" alt="eight"></p>
+<p><img src="https://cdn-images-1.medium.com/max/1000/1*b31hqXiBUjIXo2HSn_grFw.png" alt="Neural network"></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Convolutional-neural-networks">Convolutional neural networks<a class="anchor-link" href="#Convolutional-neural-networks">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="CNN-architecture">CNN architecture<a class="anchor-link" href="#CNN-architecture">&#182;</a></h3><p><img src="./figures/cnn_archi.jpeg" alt="cnn" style="width: 600px;"/></p>
+
+</div>
+</div>
+</div></div></section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>An example with a pyjama</p>
+<p><img src="./figures/pyjama2.png" alt="cifar" style="width: 500px;"/></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Back-up-slides">Back-up slides<a class="anchor-link" href="#Back-up-slides">&#182;</a></h2><p>Facial detection flow
+<img src="http://i.stack.imgur.com/oGBRR.jpg" alt="Facial"></p>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
