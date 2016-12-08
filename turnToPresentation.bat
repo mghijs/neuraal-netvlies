@@ -1,2 +1,2 @@
 TITLE Turn presentation to notebook
-jupyter nbconvert --to slides presentation.ipynb --post serve
+jupyter nbconvert presentation.ipynb --to slides --template output_toggle --post serve
