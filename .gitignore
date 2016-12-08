@@ -7,3 +7,13 @@ reportIP.7z
 latex_report/MLforIP.aux
 *.aux
 latex_report/MLpracsyllab.pdf
+reportIP/*
+*.zip
+latex_reportBijnaFinaal.7z
+*.gz
+*.out
+latex_report/MLpracsyllab.log
+*.bbl
+latex_report/MLforIP_Jim.tex
+*.log
+*.7z
