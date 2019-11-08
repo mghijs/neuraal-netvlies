@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{Egmont-Petersen2002}
+M.~Egmont-Petersen, D.~de~Ridder, and H.~Handels.
+\newblock {Image processing with neural networks—a review}.
+\newblock {\em Pattern Recognition}, 35(10):2279--2301, oct 2002.
+
+\bibitem{Krizhevsky2012}
+Alex Krizhevsky, Ilya Sutskever, and Hinton {Geoffrey E.}
+\newblock {Imagenet Classification with Deep Neural Networks}.
+\newblock {\em Advances in Neural Information Processing Systems 25
+  (NIPS2012)}, pages 1--9, 2012.
+
+\end{thebibliography}

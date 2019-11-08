@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{From cable transmission to far beyond: \040applications and evolution of image processing }{}% 1
+\BOOKMARK [1][-]{section.2}{From human vision to computer vision: principles and mechanisms }{}% 2
+\BOOKMARK [1][-]{section.3}{Copying the brain: Convolutional Neural Networks }{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{The basics: Neural networks }{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Commonly used activation functions }{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Network architecture }{subsection.3.1}% 6
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Training a neural network }{subsection.3.1}% 7
+\BOOKMARK [2][-]{subsection.3.2}{Convolutional neural networks }{section.3}% 8
+\BOOKMARK [1][-]{section.4}{Neural Network Libraries }{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Image datasets }{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Practical use-case }{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.3}{Gradient descent variants }{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.3.1}{Momentum }{subsection.4.3}% 13
+\BOOKMARK [3][-]{subsubsection.4.3.2}{Nesterov accelerated gradient }{subsection.4.3}% 14
+\BOOKMARK [3][-]{subsubsection.4.3.3}{Adagrad, Adadelta and Adam }{subsection.4.3}% 15

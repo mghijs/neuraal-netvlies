@@ -1,0 +1,156 @@
+\documentclass[a4,11pt,oneside]{article}
+%\documentclass[a4,12pt]{practica}
+
+\usepackage[english]{babel}
+\usepackage{epsfig}
+\usepackage{amssymb,listings,color,textcomp,marvosym,flafter,longtable,subfigure,amsfonts,rotating}
+\usepackage[sumlimits]{amsmath}
+\usepackage{verbatim}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{array,pstricks,listings}
+\usepackage[a4paper,verbose, centering,reversemp]{geometry}
+\usepackage[latin1]{inputenc} 
+\usepackage{fancyhdr}
+\usepackage{hhline}     % generates nicer table lines (without missing pixels) + more flexible
+\usepackage[times]{quotchap} 
+\usepackage[font={small},labelfont={bf},center]{caption}
+% this package used to produce a different style of page numbering
+%\usepackage{chappg}  
+\usepackage{times}  
+\usepackage{wrapfig}
+\usepackage{floatflt}
+% this package is used for colored text
+\usepackage{xcolor}
+% this package is used for intelligent spaces
+\usepackage{xspace}
+%\input{macros.tex}
+\usepackage[calcwidth,newparttoc]{titlesec}
+% use the titletoc package to change the toc
+\usepackage{titletoc}
+% this package is the natural frontend for pgf (a package for creating graphics in an inline manner).
+\usepackage[round]{natbib}
+\definecolor{chaptergray}{rgb}{0.85,0.85,0.85}
+%\textwidth=15.5cm
+%\textheight=23cm
+\usepackage{enumerate}
+\usepackage{pstricks,pstcol,pst-text,pst-node,pst-tree}
+\usepackage{verbatim}
+\usepackage[vlined,ruled,nederlands]{algorithm2e}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{latexcad}
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage[framemethod=TikZ]{mdframed}
+%\hypersetup{colorlinks=false}
+\definecolor{silver}{rgb}{0.95,0.95,0.95}
+\definecolor{chaptergray}{rgb}{0.95,0.95,0.95}
+\font\sixly=lasy6 % does not re-load if already loaded, so no memory problem.
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+
+\mdfdefinestyle{warning}{%
+    linecolor=white,
+    align=center,
+    roundcorner=3pt,
+    innertopmargin=6pt,
+    innerbottommargin=5pt,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=black!12,
+    skipabove=0.4\baselineskip
+}
+%\pagenumbering{arabic}
+%\input{macros.tex}
+
+%\textwidth=15.5cm
+%\textheight=23cm
+
+\parskip=\medskipamount
+%\parindent=0pt
+\setcounter{secnumdepth}{3}
+\newtheorem{mf}{MATLAB functie}[section]
+\newtheorem{vb}{Voorbeeld}[section]
+
+\newtheorem{voorbeelden}{Voorbeelden}[section]
+\newtheorem{vraag}{Vraag}[section]
+\newtheorem{opdracht}{Opdracht}[section]
+\newtheorem{opdrachtE}{Assignment}[section]
+
+
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\beas{\begin{eqnarray*}}
+\def\eeas{\end{eqnarray*}}
+
+\def\pr{\mbox{Pr}}
+
+\newtheorem{oefening}{Oefening}[section]
+%\renewcommand\chaptername{Practicum}
+
+\renewcommand{\algorithmcfname}{Algoritme}
+\input{page_layout_definition_ml}
+
+%\texttt{}
+\hyphenation{bij-ge-volg ge-wij-zigd toe-pas-sing toe-pas-sing-en
+lid-maat-schaps-func-ties ver-ge-lijk-ing-en va-ria-be-le
+pa-ra-me-ter-s pa-ra-me-ter in-gangs-var-ia-be-le
+uit-gangs-var-ia-be-le glo-ba-le sym-bo-li-sche be-schik-king
+ver-wer-ven zoek-me-tho-den pro-ba-bi-li-teit ge-ne-ra-tie
+ver-dui-de-lij-ken de-co-de-ring af-wij-king-en drie-hoe-ki-ge
+tra-pe-zo clus-ter-al-go-rit-mes uit-ein-de-lijke tracht fi-gu-ren ge-lijk-aardig mo-ge-lijke ge-lijk-aardige op-ti-ma-li-sa-tie-pro-ble-men pro-bleem-spe-ci-fie-ke}
+
+\lstset{language=R,commentstyle=, framexleftmargin=5mm,belowcaptionskip=5mm, frame=single,basicstyle={\ttfamily\small}, stringstyle=\small,commentstyle=\textcolor[rgb]{0.53,0.53,0.53}, backgroundcolor=\color[rgb]{0.93,0.93,0.93},showspaces=false,framexleftmargin=-2pt,showstringspaces=false,upquote=true}
+
+\begin{document}
+%\frontmatter
+\renewcommand{\algorithmcfname}{Algorithm}
+\pagestyle{empty}
+\include{voorblad}
+%\newpage
+%\pagestyle{empty}
+%~
+%\newpage
+%\setcounter{page}{1}
+%\pagestyle{fancy}
+%\tableofcontents
+%\newpage
+%\thispagestyle{empty}
+~
+%\mainmatter
+%\setcounter{page}{-1}
+%\part[Introduction To Machine Learning]{Introduction To\\ Machine Learning}
+
+%\pagestyle{empty}
+%\newpage
+%~
+%\newpage
+%\pagestyle{fancy}
+\setcounter{page}{1}
+
+%\parindent=0cm
+%\setcounter{chapter}{7}
+\include{MLforIP}
+%\include{MLpract_NN}
+%
+%%\include{MLpract_NB}
+%\include{MLpract_LC}
+%\include{MLpractPerceptron}
+%\include{MLpract_BOD}
+%\include{MLpract_PERF}
+%
+%%\include{MLpract6}
+%\include{MLpract_LMR}
+%\include{MLpract_NLM}
+%%\include{MLpract10}
+%\include{MLpract_DT}
+%\include{MLpract_SVM}
+
+\bibliographystyle{plain}
+\bibliography{articles}
+
+\end{document}
